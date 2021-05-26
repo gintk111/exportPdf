@@ -1,0 +1,52 @@
+{
+  "id": 4,
+  "name": "templateA1",
+  "memo": "template A",
+  "pattern": 2,
+  "author": 2,
+  "sides": [
+    {
+      "id": 6,
+      "side": 1,
+      "elements": [
+        {
+          "id": 65,
+          "itemId": 1,
+          "xMM": 170,
+          "yMM": 50,
+          "font": "Arial",
+          "fontsize": 19,
+          "color": "#ffffff",
+          "direction": 1,
+          "style": "0000",
+          "position": 1,
+          "intervalText": null,
+          "intervalLine": null,
+          "expandV": 1,
+          "expandH": 2,
+          "widthMM": null,
+          "heightMM": null,
+          "zIndex": 1
+        },
+        {
+          "itemId": 5,
+          "xMM": 170,
+          "yMM": 50,
+          "font": "Arial",
+          "fontsize": 19,
+          "color": "#ffffff",
+          "direction": 1,
+          "style": "0000",
+          "position": 1,
+          "intervalText": null,
+          "intervalLine": null,
+          "expandV": 1,
+          "expandH": 2,
+          "widthMM": null,
+          "heightMM": null,
+          "zIndex": 1
+        }
+      ]
+    }
+  ]
+}

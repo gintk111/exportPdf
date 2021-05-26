@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo.DemoController">
+   <children>
+   	<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   		<children>
+   			<Pane prefHeight="46.0" prefWidth="719.0">
+   				<children>
+      					<Label layoutX="263.0" layoutY="10.0" text="DEMO EXPORT PDF FILE">
+      						<font>
+      							<Font size="18.0" />
+      						</font>
+      					</Label>
+   				</children>
+   			</Pane>
+   			<TextField id="txtCompanyName" fx:id="txtCompanyName" layoutX="247.0" layoutY="141.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="91.0" layoutY="146.0" text="Company name: ">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<Label layoutX="91.0" layoutY="189.0" text="Full name:">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<TextField id="txtFullName" fx:id="txtFullName" layoutX="247.0" layoutY="184.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="91.0" layoutY="231.0" text="Avatar: ">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<TextField id="txtAvatar" fx:id="txtAvatar" disable="true" editable="false" layoutX="247.0" layoutY="226.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<TextField id="txtOrderId" fx:id="txtOrderId" layoutX="247.0" layoutY="354.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="91.0" layoutY="359.0" text="OrderID:">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<TextField id="txtBackground" fx:id="txtBackground" disable="true" editable="false" layoutX="247.0" layoutY="312.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="91.0" layoutY="317.0" text="Background: ">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<Label layoutX="91.0" layoutY="274.0" text="Logo: ">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<TextField id="txtLogo" fx:id="txtLogo" disable="true" editable="false" layoutX="247.0" layoutY="269.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="91.0" layoutY="401.0" text="Number of orders:">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<TextField id="txtOrderNumber" fx:id="txtOrderNumber" layoutX="247.0" layoutY="396.0" prefHeight="31.0" prefWidth="296.0">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</TextField>
+   			<Label layoutX="87.0" layoutY="445.0" text="Order date:">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Label>
+   			<DatePicker id="orderDate" fx:id="txtOrderDate" layoutX="247.0" layoutY="440.0" prefHeight="31.0" prefWidth="296.0" />
+   			<Button id="btnExport" fx:id="btnExport" layoutX="251.0" layoutY="524.0" mnemonicParsing="false" onAction="#exportFrontPdf" text="Export">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Button>
+   			<Button id="btnCancel" fx:id="btnClose" layoutX="392.0" layoutY="524.0" mnemonicParsing="false" onAction="#closePopup" text="Close">
+   				<font>
+   					<Font size="15.0" />
+   				</font>
+   			</Button>
+   			<Button id="btnAvatar" fx:id="btnAvatar" layoutX="588.0" layoutY="227.0" mnemonicParsing="false" onAction="#showAvatarChoose" text="Choose File">
+   				<font>
+   					<Font size="13.0" />
+   				</font>
+   			</Button>
+   			<Button id="btnLogo" fx:id="btnLogo" layoutX="588.0" layoutY="270.0" mnemonicParsing="false" onAction="#showLogoChooser" text="Choose File">
+   				<font>
+   					<Font size="13.0" />
+   				</font>
+   			</Button>
+   			<Button id="btnBackground" fx:id="btnBackground" layoutX="588.0" layoutY="313.0" mnemonicParsing="false" onAction="#showBackgroundChooser" text="Choose File">
+   				<font>
+   					<Font size="13.0" />
+   				</font>
+   			</Button>
+            <Label layoutX="87.0" layoutY="490.0" text="Export side:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rdFront" layoutX="254.0" layoutY="492.0" mnemonicParsing="false" onAction="#clickFrontRadio" selected="true" text="Front">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rdBack" layoutX="427.0" layoutY="492.0" mnemonicParsing="false" onAction="#clickBackRadio" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="91.0" layoutY="62.0" text="File data.json: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField id="txtCompanyName" fx:id="txtDataJson" disable="true" editable="false" layoutX="247.0" layoutY="57.0" prefHeight="31.0" prefWidth="296.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button id="btnAvatar" fx:id="btnDataJson" layoutX="585.0" layoutY="58.0" mnemonicParsing="false" onAction="#chooseData" text="Choose File">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TextField id="txtCompanyName" fx:id="txtFont" disable="true" editable="false" layoutX="246.0" layoutY="97.0" prefHeight="31.0" prefWidth="296.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="90.0" layoutY="102.0" text="Folder font: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button id="btnAvatar" fx:id="btnSelectFont" layoutX="585.0" layoutY="98.0" mnemonicParsing="false" onAction="#chooseFont" text="Choose File">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+   		</children>
+   	</Pane>
+   </children>
+
+</AnchorPane>
